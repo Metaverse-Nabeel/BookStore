@@ -1,11 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import BooksList from './components/BooksList';
+import Nav from './components/Navigation';
+import Categories from './components/Categories';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="title">BookStore CMS</h1>
-    </div>
+    <>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<BooksList />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </>
   );
 }
 
