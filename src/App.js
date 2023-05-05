@@ -1,18 +1,19 @@
-import { Route, Routes } from 'react-router-dom';
-import BooksList from './components/BooksList';
-import Nav from './components/Navigation';
-import Categories from './components/Categories';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import Home from './routes/Home';
+import Categories from './routes/Categories';
+import Navigation from './components/Navigation';
 
-function App() {
-  return (
-    <>
-      <Nav />
+const App = () => (
+  <>
+    <div className="appWrapper">
+      <Navigation />
       <Routes>
-        <Route path="/" element={<BooksList />} />
+        <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
-    </>
-  );
-}
+    </div>
+  </>
+);
 
 export default App;
