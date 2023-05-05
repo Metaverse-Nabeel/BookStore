@@ -1,0 +1,71 @@
+/* Style for Book Component */
+.bookCard {
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2rem 9.625rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.utilityBtns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.utilityBtns button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.updateBtn button {
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Card Left Side */
+.cardLeft {
+  width: 50%;
+}
+
+.genre {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  width: 20rem;
+  height: 2rem;
+  margin: 0.2rem 10rem 0 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #3e89cb;
+}
+
+/* Card Right Side */
+.cardRight {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
