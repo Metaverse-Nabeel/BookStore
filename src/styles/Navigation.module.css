@@ -1,4 +1,4 @@
-/*Navbar styles*/
+/* Navbar styles */
 .navbarContainer {
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,7 @@
   color: skyblue;
 }
 
-/*Navbar Links Style*/
+/* Navbar Links Style */
 .navbarLinks {
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 
-/*Navbar Links Style*/
+/* Navbar Links Style */
 .profileImg {
   padding: 20px;
   margin-right: 5%;
