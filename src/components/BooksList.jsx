@@ -21,8 +21,8 @@ const Books = () => {
   ];
 
   return (
-    <section className="books-container">
-      <div className="book-list">
+    <section className="booksContainer">
+      <div className="booksList">
         {booksArray.map((book) => (
           <Book
             key={book.id}
