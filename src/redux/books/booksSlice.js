@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const booksReducer = createSlice({
+const booksSlice = createSlice({
   name: 'books',
   initialState: [],
   reducers: {
@@ -21,5 +21,5 @@ const booksReducer = createSlice({
   },
 });
 
-export const { addBook, removeBook } = booksReducer.actions;
-export default booksReducer.reducer;
+export const { addBook, removeBook } = booksSlice.actions;
+export default booksSlice.reducer;
