@@ -72,6 +72,7 @@
 - **[Setup with create-react-app]**
 - **[Setup linters for React/Redux]**
 - **[Made UI/UX of BookStore CMS]**
+- **[Setup React Redux Toolkit]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
