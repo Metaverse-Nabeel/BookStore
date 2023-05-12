@@ -1,51 +1,60 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 import Button from './Buttons';
-import styleModule from '../styles/Book.module.css';
+import styles from '../styles/Book.module.css';
 
 const Book = ({
-  genre, title, author, status, chapter,
+  id, title, author, category,
 }) => {
-  const Btns = [
-    {
-      id: 1,
-      title: 'Comments',
-    },
-    {
-      id: 2,
-      title: 'Remove',
-    },
-    {
-      id: 3,
-      title: 'Edit',
-    },
-  ];
+  const dispatch = useDispatch();
+
+  const handleRemove = (bookId) => {
+    dispatch(removeBook(bookId));
+  };
 
   return (
-    <div className={styleModule.bookCard}>
-      <div className={styleModule.cardLeft}>
+    <div className={styles.bookCard}>
+      <div className={styles.leftSide}>
         <div>
-          <p className={styleModule.genre}>{genre}</p>
-          <h2 className={styleModule.title}>{title}</h2>
-          <p className={styleModule.author}>{author}</p>
-          <ul className={styleModule.utilityBtns}>
-            {Btns.map((button) => (
-              <Button key={button.id} title={button.title} />
-            ))}
+          <p className={styles.genre}>{category}</p>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.author}>{author}</p>
+          <ul>
+            <Button
+              title="Comments"
+              handleClick={() => { }}
+              className="btn"
+            />
+            <Button
+              title="Remove"
+              handleClick={() => handleRemove(id)}
+              className="btn"
+            />
+            <Button
+              title="Edit"
+              handleClick={() => { }}
+              className="btn"
+            />
           </ul>
         </div>
       </div>
-      <div className={styleModule.cardRight}>
+      <div className={styles.cardRight}>
         <div>
           <div>
-            <p>{status}</p>
+            <p>20%</p>
             <p>Completed</p>
           </div>
         </div>
-        <div className={styleModule.updateBtn}>
+        <div>
           <h3>Current Chapter</h3>
-          <p>{chapter}</p>
-          <Button title="Update progress" />
+          <p>Chapter 12</p>
+          <Button
+            title="Update Progress"
+            handleClick={() => { }}
+            className="btn"
+          />
         </div>
       </div>
     </div>
@@ -53,11 +62,10 @@ const Book = ({
 };
 
 Book.propTypes = {
-  genre: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  chapter: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
