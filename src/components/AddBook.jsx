@@ -1,39 +1,30 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { v4 as bookID } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 import FormStyles from '../styles/Form.module.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
-  const [bookData, setBooks] = useState({
+  const [bookData, setBookData] = useState({
     title: '',
     author: '',
   });
 
-  const numberOfBooks = useSelector((state) => state.books.length);
-
   const handleChange = (e) => {
-    switch (e.target.id) {
-      case 'title':
-        setBooks({ ...bookData, title: e.target.value });
-        break;
-      case 'author':
-        setBooks({ ...bookData, author: e.target.value });
-        break;
-      default:
-        break;
-    }
+    setBookData({ ...bookData, [e.target.id]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = {
-      id: numberOfBooks === 0 ? 0 : numberOfBooks + 1,
+      item_id: bookID(),
       title: bookData.title,
       author: bookData.author,
+      category: 'General',
     };
     dispatch(addBook(newBook));
-    setBooks({ title: '', author: '' });
+    setBookData({ title: '', author: '' });
   };
   return (
     <div className={FormStyles.formWrapper}>
