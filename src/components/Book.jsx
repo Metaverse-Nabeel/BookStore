@@ -29,7 +29,6 @@ const Book = ({
             <Button
               title="Remove"
               handleClick={() => {
-                console.log('id from remove btn', id);
                 handleRemove(id);
               }}
               className="removeBtn"
