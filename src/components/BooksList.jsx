@@ -11,23 +11,27 @@ const Books = () => {
       fetchedBooks.current = false;
       dispatch(fetchBooks());
     }
+    // eslint-disable-next-line
   }, []);
   const booksArray = useSelector((state) => state.books);
-  return (
-    <section className="booksContainer">
-      <div className="bookList">
-        {booksArray.map((book) => (
-          <Book
-            key={book.id}
-            id={book.id}
-            title={book.title}
-            author={book.author}
-            category={book.category}
-          />
-        ))}
-      </div>
-    </section>
-  );
+  if (booksArray.length > 0) {
+    return (
+      <section className="booksContainer">
+        <div className="bookList">
+          {booksArray.map((book) => (
+            <Book
+              key={book.id}
+              id={book.id}
+              title={book.title}
+              author={book.author}
+              category={book.category}
+            />
+          ))}
+        </div>
+      </section>
+    );
+  }
+  return '';
 };
 
 export default Books;

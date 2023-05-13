@@ -1,42 +1,28 @@
-/* Navbar styles */
-.navbarContainer {
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.leftNavbar {
-  display: flex;
-  padding: 20px;
-  margin-left: 7%;
-}
-
+/* Left Side Navbar */
 .navbarTitle {
-  color: skyblue;
+  width: 25rem;
+  height: 2.313rem;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  margin-left: 20%;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0588ec;
 }
 
-/* Navbar Links Style */
-.navbarLinks {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbarLinks li {
-  list-style: none;
-  margin-left: 50%;
-  cursor: pointer;
-}
-
-.navbarLinks a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-}
-
-/* Navbar Links Style */
-.profileImg {
+/* Profile Photo */
+.navbarProfile {
   padding: 20px;
-  margin-right: 5%;
+  margin-right: 6.5%;
+}
+
+.navbarProfile > svg {
+  color: #0588ec;
+}
+
+.logo {
+  width: 2.813rem;
+  height: 2.813rem;
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
 }

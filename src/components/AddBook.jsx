@@ -28,11 +28,11 @@ const AddBook = () => {
   };
   return (
     <div className={FormStyles.formWrapper}>
-      <h3>Add New Book</h3>
-      <form className={FormStyles.formStyle} onSubmit={handleSubmit}>
-        <input type="text" name="title" placeholder="Book Title" id="title" value={bookData.title} onChange={handleChange} required />
-        <input type="text" name="author" placeholder="Book Author" id="author" value={bookData.author} onChange={handleChange} required />
-        <button type="submit" id="addBook">
+      <h3 className={FormStyles.formTitle}>Add New Book</h3>
+      <form className="dFlex" onSubmit={handleSubmit}>
+        <input className={FormStyles.title} type="text" name="title" placeholder="Book Title" id="title" value={bookData.title} onChange={handleChange} required />
+        <input className={FormStyles.author} type="text" name="author" placeholder="Book Author" id="author" value={bookData.author} onChange={handleChange} required />
+        <button className={FormStyles.submitButton} type="submit" id="addBook">
           Add book
         </button>
       </form>

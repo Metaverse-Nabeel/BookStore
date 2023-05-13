@@ -2,22 +2,58 @@
 .formWrapper {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding: 0 2rem;
-  margin: 2rem 0;
+  align-self: center;
+  height: 20.125rem;
+  margin: 10% 8%;
+  border-top: solid 1px #f3ebeb;
 }
 
-.formStyle {
-  display: flex;
-  width: 100%;
-  gap: 2rem;
-  padding: 0.5rem 0;
+.formTitle {
+  height: 1.5rem;
+  margin: 2rem 32.75rem 1.2rem 0;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  text-transform: uppercase;
 }
 
-.formStyle input {
-  padding: 0.2rem 0.5rem;
+.title {
+  width: 33rem;
+  height: 2.813rem;
+  margin-left: -0.4%;
+  margin-right: 1%;
+  padding: 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
 }
 
-.formStyle button {
-  padding: 0.2rem 0.5rem;
+.author {
+  width: 17.813rem;
+  height: 2.813rem;
+  padding: 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.submitButton {
+  border: none;
+  letter-spacing: 0.5px;
+  height: 2.8rem;
+  width: 9rem;
+  color: #fff;
+  cursor: pointer;
+  background-color: #0686e9;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  font-weight: 700;
+  padding: 0.6rem;
+  border-radius: 3px;
+  margin-left: 1%;
+  text-transform: uppercase;
 }

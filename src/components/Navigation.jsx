@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa';
 import navbarStyles from '../styles/Navigation.module.css';
 
 const links = [
@@ -9,10 +10,10 @@ const links = [
 
 function Navigation() {
   return (
-    <nav className={navbarStyles.navbarContainer}>
-      <div className={navbarStyles.leftNavbar}>
+    <nav className="dFlex flexSpace navbarContainer">
+      <div className="dFlex">
         <h1 className={navbarStyles.navbarTitle}>BookStore CMS</h1>
-        <ul className={navbarStyles.navbarLinks}>
+        <ul className="dFlex flexSpace navbarLinks">
           {links.map((link) => (
             <li key={link.text}>
               <NavLink to={link.path}>{link.text}</NavLink>
@@ -20,8 +21,8 @@ function Navigation() {
           ))}
         </ul>
       </div>
-      <div className={navbarStyles.profileImg}>
-        <h3>Profile Image</h3>
+      <div className={navbarStyles.navbarProfile}>
+        <FaUserAlt className={navbarStyles.logo} />
       </div>
     </nav>
   );

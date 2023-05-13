@@ -74,6 +74,7 @@
 - **[Made UI/UX of BookStore CMS]**
 - **[Setup React Redux Toolkit]**
 - **[Bookstore API setup using Redux]**
+- **[UI/UX completed as per Zeplin Design]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

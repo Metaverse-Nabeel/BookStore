@@ -6,7 +6,7 @@ import Navigation from './components/Navigation';
 
 const App = () => (
   <>
-    <div className="appWrapper">
+    <div className="appWrapper dFlex flexCenter">
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />

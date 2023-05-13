@@ -1,12 +1,113 @@
-/* App Wrapper */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+body {
+  width: 100%;
+  font-family: "Montserrat", "Ubuntu", "Arial", sans-serif;
+  overflow-x: hidden;
+  font-size: 100%;
+}
+
+/* Utility Classes */
+.dFlex {
+  display: flex;
+}
+
+.flexSpace {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexCenter {
+  justify-content: center;
+}
+
+/* App Wrapper Class */
 .appWrapper {
   width: 90%;
   margin: 12% 5%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   border-radius: 10px;
   box-shadow: 1px 4px 14px 1px #57555561;
   background: #fff;
   font-size: 1rem;
+}
+
+/* Navbar Classes */
+.navbarContainer {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+
+/* Navbar Links Classes */
+.navbarLinks li {
+  list-style: none;
+  margin-left: 10%;
+}
+
+.navbarLinks a {
+  text-decoration: none;
+  opacity: 0.5;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: #000;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.navbarLinks a:hover,
+.active {
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* Bookstore - Books Section */
+
+/* Single Book Class */
+.bookCard {
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2em;
+  border-radius: 4px;
+  border: solid 1px #faf5f5;
+  background-color: #fff;
+}
+
+/* Right Side of Book Card */
+.cardRight {
+  margin-left: 2%;
+  width: 90%;
+}
+
+/* Categories Section  */
+.categoriesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categoriesButton {
+  border: none;
+  letter-spacing: 0.5px;
+  height: 2.813rem;
+  color: #fff;
+  cursor: pointer;
+  width: 9rem;
+  background-color: #0290ef;
+  font-weight: 700;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  padding: 0.6rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+.categoriesText {
+  align-self: center;
+  margin-top: 5%;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  font-size: 2rem;
+  height: 5rem;
 }
