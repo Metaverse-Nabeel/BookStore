@@ -13,7 +13,6 @@ const Book = ({
   const handleRemove = (bookId) => {
     dispatch(removeBook(bookId));
   };
-
   return (
     <div className={styles.bookCard}>
       <div className={styles.leftSide}>
@@ -29,8 +28,11 @@ const Book = ({
             />
             <Button
               title="Remove"
-              handleClick={() => handleRemove(id)}
-              className="btn"
+              handleClick={() => {
+                console.log('id from remove btn', id);
+                handleRemove(id);
+              }}
+              className="removeBtn"
             />
             <Button
               title="Edit"
@@ -43,13 +45,13 @@ const Book = ({
       <div className={styles.cardRight}>
         <div>
           <div>
-            <p>20%</p>
+            <p>80%</p>
             <p>Completed</p>
           </div>
         </div>
         <div>
           <h3>Current Chapter</h3>
-          <p>Chapter 12</p>
+          <p>Chapter 2</p>
           <Button
             title="Update Progress"
             handleClick={() => { }}
@@ -60,12 +62,15 @@ const Book = ({
     </div>
   );
 };
-
 Book.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  category: PropTypes.string,
+};
+
+Book.defaultProps = {
+  category: 'General',
 };
 
 export default Book;
