@@ -73,6 +73,7 @@
 - **[Setup linters for React/Redux]**
 - **[Made UI/UX of BookStore CMS]**
 - **[Setup React Redux Toolkit]**
+- **[Bookstore API setup using Redux]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
