@@ -2,27 +2,6 @@
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const initialArray = [
-  {
-    id: 1,
-    title: 'The Great Gatsby',
-    author: 'John Smith',
-    category: 'Fiction',
-  },
-  {
-    id: 2,
-    title: 'Anna Karenina',
-    author: 'Leo Tolstoy',
-    category: 'Fiction',
-  },
-  {
-    id: 3,
-    title: 'The Selfish Gene',
-    author: 'Richard Dawkins',
-    category: 'Nonfiction',
-  },
-];
-
 const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YEm8x3LXVW0OYFTjTIM7/';
 
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
@@ -45,7 +24,7 @@ export const removeBook = createAsyncThunk('books/removeBook', async (id) => {
 
 const booksSlice = createSlice({
   name: 'books',
-  initialState: initialArray,
+  initialState: [],
   reducers: {},
   extraReducers: (build) => {
     build.addCase(fetchBooks.fulfilled, (state, action) => {
